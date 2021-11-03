@@ -37,6 +37,15 @@ public class Tesseract {
     configure()(tesseract)
   }
 
+    private init() {
+    }
+    
+    public class func initForAnalysePage() -> Tesseract {
+        let tesseract = Tesseract()
+        TessBaseAPIInitForAnalysePage(tesseract.tesseract)
+        return tesseract
+    }
+    
   // MARK: - Initialization
   /// Creates an instance of SwiftyTesseract using standard RecognitionLanguages. The tessdata
   /// folder MUST be in your Xcode project as a folder reference (blue folder icon, not yellow)
